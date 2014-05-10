@@ -17,16 +17,16 @@
 
 ## The 'plot3()' function generates the third graph of the assignment which 
 ## consists of line graphs for the three submettring data.
-
 plot3 <- function(){
      # 1. read data with dates 2007-02-01 to 2007-02-02
      #    the data has be pre-processed from the household_power_consumption.txt
      #    file to make the generation of the graph faster.
      theData <- getCleanData()
-
+     
      # 2. Open the device- png- to which the graph is printed.
      #    We used png rather than dev.copy to ensure that it
-     #    will fit the specified dimension of the file.
+     #    will fit the specified dimension of the file.  The
+     #    graph is saved in plot2.png.
      png(file = "plot3.png", width=480, height=480, units="px")
      
      # 3. plot global active power vs. date and time
