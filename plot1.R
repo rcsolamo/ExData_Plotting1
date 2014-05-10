@@ -26,7 +26,7 @@ plot1 <- function() {
      # 2. plot global active power
      par(mar=c(5,5,2,2))
      hist(theData$Global_active_power, xlab = "Global Active Power (kilowatts)",
-           ylab = "Frequency", main = "Global Active Power", col = "magenta")
+           ylab = "Frequency", main = "Global Active Power", col = "red")
      
      # 3. save the plot to a png file called plot1.png with the specified
      #    width=480, height=480 in pixels
