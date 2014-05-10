@@ -31,7 +31,7 @@ plot2 <- function(){
      par(mar=c(5,5,2,2))
      x <- strptime(paste(theData$Date,theData$Time,sep=" "),"%d/%m/%Y %H:%M:%S")
      y <- theData$Global_active_power
-     plot(x, y, pch=".", ylab="Global Active Power(kilowatt", xlab="")
+     plot(x, y, pch=".", ylab="Global Active Power(kilowatts)", xlab="")
      lines(x, y)
      # 3. save the plot to a png file called plot2.png with the specified
      #    width=480, height=480 in pixels
