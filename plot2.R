@@ -13,7 +13,7 @@
 ##
 ## TO DO LIST:
 ## TODO (rcsolamo) : provide comments
-## 
+
 
 ## The 'plot2()' function generates the second graph of the assignment which 
 ## is a line graph of the household global minutes-average active power (in kilowatt).

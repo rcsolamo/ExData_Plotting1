@@ -13,7 +13,7 @@
 ##
 ## TO DO LIST:
 ## TODO (rcsolamo) : provide comments
-## 
+
 
 ## The 'plot1()' function generates the first graph of the assignment which 
 ## is a histogram of the household global minutes-average active power (in kilowatt).
