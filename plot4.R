@@ -58,7 +58,7 @@ plot4 <- function(){
      legend("topright", pch="-", col=c("black", "red","blue"), 
           legend=c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), bty="n")
 
-     # 4.4 Global Active Power vs. datetime
+     # 4.4 Global Reactive Power vs. datetime
      yGlobalReactivePower <- theData$Global_reactive_power
      plot(x, yGlobalReactivePower, pch=".", xlab="datetime", ylab="Global_reactive_power")
      lines(x, yGlobalReactivePower)
