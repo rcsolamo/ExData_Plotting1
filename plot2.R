@@ -27,15 +27,21 @@ plot2 <- function(){
      #    the data has be pre-processed from the household_power_consumption.txt
      #    file to make the generation of the graph faster.
      theData <- getCleanData()
-     # 2. plot global active power vs. date and time
+     
+     # 2. Open the device- png- to which the graph is printed.
+     #    We used png rather than dev.copy to ensure that it
+     #    will fit the specified dimension of the file.  The
+     #    graph is saved in plot2.png.
+     png(file = "plot2.png", width=480, height=480, units="px")
+     
+     # 3. plot global active power vs. date and time
      par(mar=c(5,5,2,2))
      x <- strptime(paste(theData$Date,theData$Time,sep=" "),"%d/%m/%Y %H:%M:%S")
      y <- theData$Global_active_power
      plot(x, y, pch=".", ylab="Global Active Power(kilowatts)", xlab="")
      lines(x, y)
-     # 3. save the plot to a png file called plot2.png with the specified
-     #    width=480, height=480 in pixels
-     dev.copy(png, file = "plot2.png", width=480, height=480, units="px")
+
+     # 4. Turn off the device.
      dev.off()
 }
 

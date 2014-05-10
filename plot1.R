@@ -23,14 +23,18 @@ plot1 <- function() {
      #    file to make the generation of the graph faster.
      theData <- getCleanData()
      
-     # 2. plot global active power
+     # 2. Open the device- png- to which the graph is printed.
+     #    We used png rather than dev.copy to ensure that it
+     #    will fit the specified dimension of the file.  The
+     #    graph is saved in plot1.png.
+     png(file = "plot1.png", width=480, height=480, units="px")
+     
+     # 3. plot global active power
      par(mar=c(5,5,2,2))
      hist(theData$Global_active_power, xlab = "Global Active Power (kilowatts)",
            ylab = "Frequency", main = "Global Active Power", col = "red")
      
-     # 3. save the plot to a png file called plot1.png with the specified
-     #    width=480, height=480 in pixels
-     dev.copy(png, file = "plot1.png", width=480, height=480, units="px")
+     # 4. Turn off the device
      dev.off()
 }
 
